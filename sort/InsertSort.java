@@ -7,7 +7,7 @@ public class InsertSort {
 		for (int j = 1; j < arr.length; j++) {
 			int key = arr[j];
 			int i = j - 1; //sempre movimenta o para posição anterior
-			while (i >= 0 && arr[i] > key) {
+			while (i >= 0 && arr[i] > key) { //para ordenar na direção contraria basta inverter o operador "arr[i] < key"
 				arr[i+1] = arr[i];
 				i--;
 			}
@@ -16,7 +16,7 @@ public class InsertSort {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = new int [] {9,8,7,6,1,2,5,4};
+		int[] arr = new int [] {9,8,7,6,1,2,5,4}; //total de cartas
 		sort(arr);
 		System.out.println(Arrays.toString(arr));
 	}
